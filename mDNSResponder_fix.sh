@@ -8,7 +8,7 @@ fi
 
 sudo -l || exit # don't continue if sudo fails
 
-sudo sed -i .orig 's/\(<string>-launchd<\/string>\)/\1\
+sudo sed -i .orig 's/\(<string>\/usr\/sbin\/mDNSResponder<\/string>\)/\1\
                 <string>-AlwaysAppendSearchDomains<\/string>/
 ' $plist
 
