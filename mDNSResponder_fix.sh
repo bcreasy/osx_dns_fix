@@ -13,6 +13,6 @@ sudo sed -i .orig 's/\(<string>\/usr\/sbin\/mDNSResponder<\/string>\)/\1\
 ' $plist
 
 if [[ -z $debug ]]; then
-  echo sudo launchctl unload -w $plist
-  echo sudo launchctl load -w $plist
+  sudo launchctl unload -w $plist
+  sudo launchctl load -w $plist
 fi
