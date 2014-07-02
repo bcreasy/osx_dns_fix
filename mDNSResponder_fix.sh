@@ -18,7 +18,10 @@ sudo -l || exit # don't continue if sudo fails
 
 case "$kernel" in
   "11.4.2") # lion
-    ;&
+    sudo sed -i.orig 's/\(<string>-launchd<\/string>\)/\1\
+               <string>-AlwaysAppendSearchDomains<\/string>/
+' $plist
+    ;;
   "12.5.0") # mountain lion
     sudo sed -i.orig 's/\(<string>-launchd<\/string>\)/\1\
                <string>-AlwaysAppendSearchDomains<\/string>/
