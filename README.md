@@ -7,10 +7,9 @@ It will add the -AlwaysAppendSearchDomains command line argument to the mDNSResp
 
 Requires sudo(1) permissions.
 
-This branch assumes OSX Mavericks is installed.  See other branches for other OSX version compatibility.
-
 To apply the patch, run the script from your terminal:
 ```
 ./mDNSREsponder_fix.sh
 ```
 
+Supported OSX versions: lion, mountain lion, mavericks
