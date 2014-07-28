@@ -17,17 +17,17 @@ fi
 sudo -l || exit # don't continue if sudo fails
 
 case "$kernel" in
-  "11.4.2") # lion
+  11.*) # lion
     sudo sed -i.orig 's/\(<string>-launchd<\/string>\)/\1\
                <string>-AlwaysAppendSearchDomains<\/string>/
 ' $plist
     ;;
-  "12.5.0") # mountain lion
+  12.*) # mountain lion
     sudo sed -i.orig 's/\(<string>-launchd<\/string>\)/\1\
                <string>-AlwaysAppendSearchDomains<\/string>/
 ' $plist
     ;;
-  "13.2.0") # mavericks
+  13.*) # mavericks
     sudo sed -i.orig 's/\(<string>\/usr\/sbin\/mDNSResponder<\/string>\)/\1\
                <string>-AlwaysAppendSearchDomains<\/string>/
 ' $plist
